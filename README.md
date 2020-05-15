@@ -53,7 +53,7 @@ You can get the data from the TrustBox in your businness panel on [Trustpilot](h
 Import the component **TrustpilotReviews** in your component.
 
 ```javascript
-import { TrustpilotReviews } from "@pittica/gatsby-plugin-trustpilot-widget"
+import TrustpilotReviews from "@pittica/gatsby-plugin-trustpilot-widget"
 ```
 
 Use it in your code as component.

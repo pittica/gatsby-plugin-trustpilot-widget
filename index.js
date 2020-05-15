@@ -1,3 +1,3 @@
-import TrustpilotReviews from "./src/TrustpilotReviews"
+import TrustpilotReviews from "./src/trustpilot-reviews"
 
-export { TrustpilotReviews }
+export default TrustpilotReviews
