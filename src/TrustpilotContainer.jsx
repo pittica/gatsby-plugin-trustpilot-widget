@@ -9,6 +9,10 @@ export default class TrustpilotContainer extends React.Component {
     check = setInterval(this.loadLibrary.bind(this), 1000)
   }
 
+  componentDidMount() {
+    this.loadLibrary()
+  }
+
   componentWillUnmount() {
     clearInterval(check)
   }
