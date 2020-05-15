@@ -14,7 +14,7 @@
 ## Install
 
 ```shell
-npm install --save @pittica/gatsby-plugin-trustpilot-widget
+npm install @pittica/gatsby-plugin-trustpilot-widget
 ```
 
 ## Configuration
