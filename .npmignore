@@ -1,0 +1,12 @@
+logs
+*.log
+node_modules
+*.un~
+yarn.lock
+package-lock.json
+src
+flow-typed
+coverage
+decls
+examples
+gatsby-plugin-trustpilot-widget.code-workspace

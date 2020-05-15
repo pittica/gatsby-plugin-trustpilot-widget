@@ -1,0 +1,33 @@
+{
+  "name": "@pittica/gatsby-plugin-trustpilot-widget",
+  "private": false,
+  "description": "Trustpilot widget for GatsbyJS.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Lucio Benini",
+    "email": "info@pittica.com",
+    "url": "https://pittica.com"
+  },
+  "bugs": {
+    "url": "https://github.com/pittica/gatsby-plugin-trustpilot-widget/issues"
+  },
+  "deprecated": false,
+  "homepage": "https://github.com/pittica/gatsby-plugin-trustpilot-widget",
+  "keywords": [
+    "gatsby",
+    "gatsby-plugin",
+    "trustpilot"
+  ],
+  "dependencies": {
+    "gatsby": "^2.21.22",
+    "prop-types": "^15.7.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "license": "MIT",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pittica/gatsby-plugin-trustpilot-widget.git"
+  }
+}
