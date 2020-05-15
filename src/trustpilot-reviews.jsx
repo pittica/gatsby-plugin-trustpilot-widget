@@ -2,7 +2,7 @@ import React, { Fragment } from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
-import TrustpilotContainer from "./TrustpilotContainer"
+import TrustpilotContainer from "./trustpilot-container"
 
 const TrustpilotReviews = ({ language, culture, theme, height, width }) => {
   const reference = React.createRef()
