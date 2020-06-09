@@ -1,10 +1,10 @@
-# pittica/gatsby-plugin-trustpilot-widget
+# gatsby-plugin-trustpilot-widget
 
 ![License](https://img.shields.io/github/license/pittica/gatsby-plugin-trustpilot-widget)
 ![Version](https://img.shields.io/github/package-json/v/pittica/gatsby-plugin-trustpilot-widget)
 ![Release](https://img.shields.io/github/v/release/pittica/gatsby-plugin-trustpilot-widget)
-![GitHub package.json dependency version (dev dep on branch)](https://img.shields.io/github/package-json/dependency-version/pittica/gatsby-plugin-trustpilot-widget/dev/gatsby)
-![GitHub package.json dependency version (dev dep on branch)](https://img.shields.io/github/package-json/dependency-version/pittica/gatsby-plugin-trustpilot-widget/dev/react)
+![GitHub package.json dependency version (dev dep on branch)](https://img.shields.io/github/package-json/dependency-version/dadoagency/gatsby-plugin-trustpilot-widget/dev/gatsby)
+![GitHub package.json dependency version (dev dep on branch)](https://img.shields.io/github/package-json/dependency-version/dadoagency/gatsby-plugin-trustpilot-widget/dev/react)
 
 ## Description
 
@@ -15,7 +15,7 @@
 [![npm](https://img.shields.io/npm/v/@pittica/gatsby-plugin-trustpilot-widget)](https://www.npmjs.com/package/@pittica/gatsby-plugin-trustpilot-widget)
 
 ```shell
-npm install @pittica/gatsby-plugin-trustpilot-widget
+npm install @dadoagency/gatsby-plugin-trustpilot-widget
 ```
 
 ## Configuration
@@ -26,7 +26,7 @@ Edit your **gatsby-config.js**.
 module.exports = {
 	plugins: [
 		{
-			resolve: `@pittica/gatsby-plugin-trustpilot-widget`,
+			resolve: `@dadoagency/gatsby-plugin-trustpilot-widget`,
 			options: {
 				username: "USERNAME",
 				template: "TEMPLATE_ID",
@@ -54,7 +54,7 @@ You can get the data from the TrustBox in your businness panel on [Trustpilot](h
 Import the component **TrustpilotReviews** in your component.
 
 ```javascript
-import TrustpilotReviews from "@pittica/gatsby-plugin-trustpilot-widget";
+import TrustpilotReviews from "@dadoagency/gatsby-plugin-trustpilot-widget";
 ```
 
 Use it in your code as component.
