@@ -17,7 +17,7 @@ const TrustpilotReviews = ({
 		graphql`
 			query TrustPilot {
 				sitePlugin(
-					name: { eq: "@pittica/gatsby-plugin-trustpilot-widget" }
+					name: { eq: "@dadoagency/gatsby-plugin-trustpilot-widget" }
 				) {
 					pluginOptions {
 						username
