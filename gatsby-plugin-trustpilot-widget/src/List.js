@@ -1,8 +1,8 @@
 import React, { Fragment } from "react";
 import PropTypes from "prop-types";
-import { useStaticQuery, graphql } from "gatsby";
-
+import templates from './templates'
 import TrustpilotContainer from "./trustpilot-container";
+import useSitePluginOptions from "./hooks/useSitePluginOptions"
 
 const TrustpilotReviews = ({
 	language,
@@ -13,23 +13,9 @@ const TrustpilotReviews = ({
 	stars,
 }) => {
 	const reference = React.createRef();
-	const { sitePlugin } = useStaticQuery(
-		graphql`
-			query TrustPilot {
-				sitePlugin(
-					name: { eq: "@dadoagency/gatsby-plugin-trustpilot-widget" }
-				) {
-					pluginOptions {
-						username
-						template
-						business
-					}
-				}
-			}
-		`
-	);
-	const { template, business, username } = sitePlugin.pluginOptions;
 
+	const { business, username } = useSitePluginOptions()
+	console.log('listing')
 	return (
 		<Fragment>
 			<TrustpilotContainer
@@ -39,7 +25,7 @@ const TrustpilotReviews = ({
 				theme={theme}
 				height={height}
 				width={width}
-				template={template}
+				template={templates.List}
 				business={business}
 				username={username}
 				stars={stars}
