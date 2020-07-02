@@ -29,7 +29,6 @@ module.exports = {
 			resolve: `@dadoagency/gatsby-plugin-trustpilot-widget`,
 			options: {
 				username: "USERNAME",
-				template: "TEMPLATE_ID",
 				business: "BUSINESSUNIT_ID",
 			},
 		},
@@ -54,7 +53,7 @@ You can get the data from the TrustBox in your businness panel on [Trustpilot](h
 Import the component **TrustpilotReviews** in your component.
 
 ```javascript
-import TrustpilotReviews from "@dadoagency/gatsby-plugin-trustpilot-widget";
+import {List, MicroStar} from "@dadoagency/gatsby-plugin-trustpilot-widget";
 ```
 
 Use it in your code as component.
@@ -63,7 +62,7 @@ Use it in your code as component.
 class MyComponent extends React.Component {
 	render() {
 		return (
-			<TrustpilotReviews
+			<List
 				language="en"
 				culture="US"
 				theme="light"
@@ -71,6 +70,7 @@ class MyComponent extends React.Component {
 				height="52px"
 				stars="3"
 			/>
+			<MicroStar/>
 		);
 	}
 }
