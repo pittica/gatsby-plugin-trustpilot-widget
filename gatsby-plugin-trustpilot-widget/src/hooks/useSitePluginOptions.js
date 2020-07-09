@@ -1,7 +1,6 @@
 import { useStaticQuery, graphql } from "gatsby";
 
- const useSitePluginOptions = () =>{
-     console.log('hooking')
+const useSitePluginOptions = () => {
     const { sitePlugin } = useStaticQuery(
         graphql`
                 query TrustPilot {

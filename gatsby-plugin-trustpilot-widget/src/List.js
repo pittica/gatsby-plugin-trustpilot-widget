@@ -15,7 +15,6 @@ const TrustpilotReviews = ({
 	const reference = React.createRef();
 
 	const { business, username } = useSitePluginOptions()
-	console.log('listing')
 	return (
 		<Fragment>
 			<TrustpilotContainer

@@ -4,7 +4,12 @@ module.exports = {
   addons: ["@storybook/addon-actions", "@storybook/addon-links"],
   webpackFinal: async config => {
     // Transpile Gatsby module because Gatsby includes un-transpiled ES6 code.
-    config.module.rules[0].exclude = [/node_modules\/(?!(gatsby)\/)/, /node_modules\/(?!(@dadoagency)\/)/]
+    // config.module.rules[0].exclude = [/node_modules\/(?!(gatsby)\/)(?!(@dadoagency)\/)/g]
+    config.module.rules[0].exclude = [/node_modules\/(?!(gatsby)\/)/]
+
+    //transpile @dadoagancy
+    // config.module.rules[0].include = [/node_modules\/@dadoagency/]
+
     // use installed babel-loader which is v8.0-beta (which is meant to work with @babel/core@7)
     config.module.rules[0].use[0].loader = require.resolve("babel-loader")
     // use @babel/preset-react for JSX and env (instead of staged presets)
