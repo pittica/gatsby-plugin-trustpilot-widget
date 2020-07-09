@@ -1,34 +1,34 @@
 {
-	"name": "@dadoagency/gatsby-plugin-trustpilot-widget",
-	"private": false,
-	"description": "Trustpilot widget for GatsbyJS.",
-	"version": "1.0.6",
-	"author": "Dado Agency <hello@dadoagency.com> (https://dadoagency.com)",
-	"bugs": {
-		"url": "https://github.com/dadoagency/gatsby-plugin-trustpilot-widget/issues"
-	},
-	"deprecated": false,
-	"homepage": "https://github.com/dadoagency/gatsby-plugin-trustpilot-widget",
-	"keywords": [
-		"gatsby",
-		"gatsby-plugin",
-		"trustpilot"
-	],
-	"dependencies": {
-		"prop-types": "^15.7.2"
-	},
-	"devDependencies": {
-		"gatsby": "^2.21.22",
-		"react": "^16.13.1",
-		"react-dom": "^16.13.1"
-	},
-	"license": "MIT",
-	"main": "index.js",
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/dadoagency/gatsby-plugin-trustpilot-widget.git"
-	},
-	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
-	}
+  "name": "@dadoagency/gatsby-plugin-trustpilot-widget",
+  "private": false,
+  "description": "Trustpilot widget for GatsbyJS.",
+  "version": "1.0.6",
+  "author": "Dado Agency <hello@dadoagency.com> (https://dadoagency.com)",
+  "bugs": {
+    "url": "https://github.com/dadoagency/gatsby-plugin-trustpilot-widget/issues"
+  },
+  "deprecated": false,
+  "homepage": "https://github.com/dadoagency/gatsby-plugin-trustpilot-widget",
+  "keywords": [
+    "gatsby",
+    "gatsby-plugin",
+    "trustpilot"
+  ],
+  "dependencies": {
+    "prop-types": "^15.7.2"
+  },
+  "devDependencies": {
+    "gatsby": "^2.21.22",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "license": "MIT",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dadoagency/gatsby-plugin-trustpilot-widget.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
 }

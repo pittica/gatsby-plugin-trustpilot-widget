@@ -1,4 +1,4 @@
-import List from "./dist/List";
-import MicroStar from "./dist/Microstar";
+import List from "./src/List";
+import MicroStar from "./src/Microstar";
 
 export { MicroStar, List };
