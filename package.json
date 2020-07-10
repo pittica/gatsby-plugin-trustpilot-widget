@@ -2,7 +2,7 @@
   "name": "@dadoagency/gatsby-plugin-trustpilot-widget",
   "private": false,
   "description": "Trustpilot widget for GatsbyJS.",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "author": "Dado Agency <hello@dadoagency.com> (https://dadoagency.com)",
   "bugs": {
     "url": "https://github.com/dadoagency/gatsby-plugin-trustpilot-widget/issues"
