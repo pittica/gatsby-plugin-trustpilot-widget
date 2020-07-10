@@ -36,7 +36,7 @@ module.exports = {
 };
 ```
 
-The _username_, _template_ and _business_ fields **are required**.
+The _username_ and _business_ fields **are required**.
 
 You can get the data from the TrustBox in your businness panel on [Trustpilot](https://www.trustpilot.com/)
 
