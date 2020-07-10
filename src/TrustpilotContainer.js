@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 export default class TrustpilotContainer extends React.Component {
   constructor(props) {
@@ -53,7 +53,7 @@ export default class TrustpilotContainer extends React.Component {
         <a
           href={`https://${domain}.trustpilot.com/review/${username}`}
           target="_blank"
-          rel="noopener"
+          rel="noreferrer"
         >
           Trustpilot
         </a>
