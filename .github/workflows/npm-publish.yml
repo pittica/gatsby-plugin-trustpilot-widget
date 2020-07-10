@@ -1,46 +1,26 @@
-# This workflow will run tests using node and then publish a package to GitHub Packages when a release is created
-# For more information see: https://help.github.com/actions/language-and-framework-guides/publishing-nodejs-packages
-
-name: Node.js Package
-
+name: Test and Release
 on:
   push:
     branches:
       - master
-    paths-ignore:
-      - 'package.json'
-      - 'CHANGELOG.md'
-      
+
 jobs:
-  build:
-    runs-on: ubuntu-latest
+test-and-release:
+    name: Run tests and release
+    runs-on: ubuntu-18.04
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
+    - name: Checkout
+        uses: actions/checkout@v1
+    - name: Setup Node.js
+        uses: actions/setup-node@v1
         with:
-          node-version: 12
-      - run: yarn
-
-  tag:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@master
-      - uses: tool3/bump@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          unrelated: true
-
-  publish-npm:
-    needs: tag
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
-        with:
-          node-version: 12
-          registry-url: https://registry.npmjs.org/
-      - run: yarn
-      - run: yarn publish --public
+        node-version: 12
+    - name: Install dependencies
+        run: npm ci
+    - name: Run tests
+        run: npm test
+    - name: Release
         env:
-          NODE_AUTH_TOKEN: ${{secrets.npm_token}}
-
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: npm run semantic-release
