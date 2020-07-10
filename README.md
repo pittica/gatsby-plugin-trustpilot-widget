@@ -5,7 +5,7 @@
 ![Release](https://img.shields.io/github/v/release/pittica/gatsby-plugin-trustpilot-widget)
 ![GitHub package.json dependency version (dev dep on branch)](https://img.shields.io/github/package-json/dependency-version/dadoagency/gatsby-plugin-trustpilot-widget/dev/gatsby)
 ![GitHub package.json dependency version (dev dep on branch)](https://img.shields.io/github/package-json/dependency-version/dadoagency/gatsby-plugin-trustpilot-widget/dev/react)
-
+![Node.js Package](https://github.com/dadoagency/gatsby-plugin-trustpilot-widget/workflows/Node.js%20Package/badge.svg)
 ## Description
 
 [Trustpilot](https://www.trustpilot.com/) widget for [GatsbyJS](https://www.gatsbyjs.org/).
