@@ -28,11 +28,11 @@ jobs:
     steps:
     - uses: actions/checkout@v1
       with:
-        token: ${{ secrets.GH_PAT }}
+        token: ${{ secrets.GITHUB_TOKEN }}
     - name: Bump version and push tag
       uses: TriPSs/conventional-changelog-action@master
       with:
-        github-token: ${{ secrets.GH_PAT }}
+        github-token: ${{ secrets.GITHUB_TOKEN }}
         git-message: 'chore(release): {version}'
         preset: 'react'
         tag-prefix: ''
