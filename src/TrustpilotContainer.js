@@ -37,7 +37,6 @@ export default class TrustpilotContainer extends React.Component {
     const language = this.props.language.toLowerCase();
     const culture = this.props.culture.toUpperCase();
     const domain = language === "en" ? "www" : language;
-
     return (
       <div
         ref={reference}

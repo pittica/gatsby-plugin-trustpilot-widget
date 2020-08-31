@@ -1,4 +1,5 @@
 import List from "./src/List";
+import MicroCombo from "./src/MicroCombo"
 import MicroStar from "./src/Microstar";
 
-export { MicroStar, List };
+export { List, MicroCombo, MicroStar };
