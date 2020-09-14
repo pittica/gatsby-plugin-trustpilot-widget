@@ -4,36 +4,29 @@ import templates from './templates';
 import TrustpilotContainer from './TrustpilotContainer';
 import useSitePluginOptions from './hooks/useSitePluginOptions';
 
-const TrustpilotReviews = ({
-  language,
-  culture,
-  theme,
-  height,
-  width,
-  stars,
-}) => {
+const Carousel = ({ language, culture, theme, height, width, stars }) => {
   const reference = React.createRef();
-
   const { business, username } = useSitePluginOptions();
+
   return (
     <Fragment>
       <TrustpilotContainer
         reference={reference}
+        template={templates.Carousel}
+        business={business}
+        username={username}
         language={language}
         culture={culture}
         theme={theme}
         height={height}
         width={width}
-        template={templates.List}
-        business={business}
-        username={username}
         stars={stars}
       />
     </Fragment>
   );
 };
 
-TrustpilotReviews.propTypes = {
+Carousel.propTypes = {
   language: PropTypes.string,
   culture: PropTypes.string,
   theme: PropTypes.string,
@@ -42,7 +35,7 @@ TrustpilotReviews.propTypes = {
   stars: PropTypes.number,
 };
 
-TrustpilotReviews.defaultProps = {
+Carousel.defaultProps = {
   language: 'en',
   culture: 'US',
   theme: 'light',
@@ -51,4 +44,4 @@ TrustpilotReviews.defaultProps = {
   stars: 5,
 };
 
-export default TrustpilotReviews;
+export default Carousel;
