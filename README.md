@@ -143,4 +143,4 @@ Filters reviews by stars
 
 ## Copyright
 
-(c) 2020, Pittaca S.r.l.s.
+(c) 2020, Dado Agency (Pty) Ltd; Pittaca S.r.l.s.
