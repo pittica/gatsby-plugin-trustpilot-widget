@@ -4,7 +4,15 @@ import templates from "./templates";
 import TrustpilotContainer from "./TrustpilotContainer";
 import useSitePluginOptions from "./hooks/useSitePluginOptions";
 
-const ProductMini = ({ language, culture, theme, height, width, stars }) => {
+const ProductMini = ({
+  sku,
+  language,
+  culture,
+  theme,
+  height,
+  width,
+  stars,
+}) => {
   const reference = React.createRef();
   const { business, username } = useSitePluginOptions();
 
@@ -21,12 +29,14 @@ const ProductMini = ({ language, culture, theme, height, width, stars }) => {
         height={height}
         width={width}
         stars={stars}
+        sku={sku}
       />
     </Fragment>
   );
 };
 
 ProductMini.propTypes = {
+  sku: PropTypes.string,
   language: PropTypes.string,
   culture: PropTypes.string,
   theme: PropTypes.string,

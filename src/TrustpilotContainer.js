@@ -33,6 +33,7 @@ export default class TrustpilotContainer extends React.Component {
       business,
       username,
       stars,
+      sku,
     } = this.props;
     const language = this.props.language.toLowerCase();
     const culture = this.props.culture.toUpperCase();
@@ -48,6 +49,7 @@ export default class TrustpilotContainer extends React.Component {
         data-style-width={width}
         data-theme={theme}
         data-stars={stars}
+        data-sku={sku}
       >
         <a
           href={`https://${domain}.trustpilot.com/review/${username}`}
