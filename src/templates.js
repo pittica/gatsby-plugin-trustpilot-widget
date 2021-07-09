@@ -7,4 +7,5 @@ export default {
   MicroStar: "5419b732fbfb950b10de65e5",
   MicroCombo: "5419b6ffb0d04a076446a9af",
   ProductMini: "54d39695764ea907c0f34825",
+  Mini: "53aa8807dec7e10d38f59f32",
 };

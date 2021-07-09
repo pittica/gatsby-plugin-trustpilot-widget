@@ -141,6 +141,11 @@ Filters reviews by stars
 
 `null` (returns all reviews)
 
+## Adding New Widgets
+You can easily add more widgets by duplicating the most recently edited widget in `src`, setting its `template` to the widget's template ID (which you should define in `src/templates.js`), and exporting it in `index.js`.
+
+If you commit your changes with a commit message starting with `feat`, the npm package for this repo will have its version bumped and the new version published automatically.
+
 ## Copyright
 
 (c) 2020, Dado Agency (Pty) Ltd; Pittaca S.r.l.s.
