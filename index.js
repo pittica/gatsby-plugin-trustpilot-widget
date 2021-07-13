@@ -1,3 +1,23 @@
-import TrustpilotReviews from "./src/trustpilot-reviews"
+import Carousel from "./src/Carousel";
+import Grid from "./src/Grid";
+import Horizontal from "./src/Horizontal";
+import List from "./src/List";
+import MiniCarousel from "./src/MiniCarousel";
+import MicroCombo from "./src/MicroCombo";
+import MicroStar from "./src/MicroStar";
+import ProductMini from "./src/ProductMini";
+import Mini from "./src/Mini";
+import ProductHorizontal from './src/ProductHorizontal'
 
-export default TrustpilotReviews
+export {
+  Carousel,
+  Grid,
+  Horizontal,
+  List,
+  MiniCarousel,
+  MicroCombo,
+  MicroStar,
+  ProductMini,
+  Mini,
+  ProductHorizontal
+};
