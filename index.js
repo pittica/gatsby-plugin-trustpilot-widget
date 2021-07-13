@@ -7,6 +7,7 @@ import MicroCombo from "./src/MicroCombo";
 import MicroStar from "./src/MicroStar";
 import ProductMini from "./src/ProductMini";
 import Mini from "./src/Mini";
+import ProductHorizontal from './src/ProductHorizontal'
 
 export {
   Carousel,
@@ -18,4 +19,5 @@ export {
   MicroStar,
   ProductMini,
   Mini,
+  ProductHorizontal
 };
