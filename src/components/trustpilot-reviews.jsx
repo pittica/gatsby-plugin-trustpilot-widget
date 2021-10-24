@@ -4,22 +4,25 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import TrustpilotContainer from "./trustpilot-container"
 
-const TrustpilotReviews = ({ language, culture, theme, height, width }) => {
+export default function TrustpilotReviews({
+  language,
+  culture,
+  theme,
+  height,
+  width,
+}) {
   const reference = React.createRef()
-  const { sitePlugin } = useStaticQuery(
+  const {
+    sitePlugin: { template, business, username },
+  } = useStaticQuery(
     graphql`
       query TrustPilot {
         sitePlugin(name: { eq: "@pittica/gatsby-plugin-trustpilot-widget" }) {
-          pluginOptions {
-            username
-            template
-            business
-          }
+          pluginOptions
         }
       }
     `
   )
-  const { template, business, username } = sitePlugin.pluginOptions
 
   return (
     <Fragment>
@@ -43,7 +46,7 @@ TrustpilotReviews.propTypes = {
   culture: PropTypes.string,
   theme: PropTypes.string,
   height: PropTypes.string,
-  width: PropTypes.string
+  width: PropTypes.string,
 }
 
 TrustpilotReviews.defaultProps = {
@@ -51,7 +54,5 @@ TrustpilotReviews.defaultProps = {
   culture: "US",
   theme: "light",
   height: "52px",
-  width: "100%"
+  width: "100%",
 }
-
-export default TrustpilotReviews
