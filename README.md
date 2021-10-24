@@ -3,8 +3,8 @@
 ![License](https://img.shields.io/github/license/pittica/gatsby-plugin-trustpilot-widget)
 ![Version](https://img.shields.io/github/package-json/v/pittica/gatsby-plugin-trustpilot-widget)
 ![Release](https://img.shields.io/github/v/release/pittica/gatsby-plugin-trustpilot-widget)
-![GitHub package.json dependency version (dev dep on branch)](https://img.shields.io/github/package-json/dependency-version/pittica/gatsby-plugin-trustpilot-widget/dev/gatsby)
-![GitHub package.json dependency version (dev dep on branch)](https://img.shields.io/github/package-json/dependency-version/pittica/gatsby-plugin-trustpilot-widget/dev/react)
+![GatsbyJS](https://img.shields.io/github/package-json/dependency-version/pittica/gatsby-plugin-trustpilot-widget/gatsby)
+![React](https://img.shields.io/github/package-json/dependency-version/pittica/gatsby-plugin-trustpilot-widget/react)
 
 ## Description
 
