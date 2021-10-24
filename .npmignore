@@ -8,6 +8,9 @@ flow-typed
 coverage
 decls
 examples
-gatsby-plugin-trustpilot-widget.code-workspace
-src
+.gitattributes
 .github
+gatsby-plugin-trustpilot-widget.code-workspace
+.prettierignore
+.prettierrc
+src
