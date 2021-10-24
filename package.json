@@ -2,7 +2,7 @@
   "name": "@pittica/gatsby-plugin-trustpilot-widget",
   "private": false,
   "description": "Trustpilot widget for GatsbyJS.",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "author": {
     "name": "Lucio Benini",
     "email": "info@pittica.com",
@@ -19,23 +19,15 @@
     "trustpilot"
   ],
   "dependencies": {
-    "gatsby": "^4.0.0",
     "prop-types": "^15.7.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
-  "devDependencies": {
-    "@babel/cli": "^7.15.4",
-    "babel-preset-gatsby-package": "^2.0.0",
-    "cpx": "^1.5.0",
-    "react-scripts": "^4.0.3"
+  "peerDependencies": {
+    "gatsby": "^3.0.0 || ^4.0.0"
   },
-  "scripts": {
-    "test": "react-scripts test",
-    "build": "rimraf ./dist && mkdirp ./dist && babel src --out-dir dist --copy-files && cpx package.json ./dist"
-  },
+  "main": "index.jsx",
   "license": "MIT",
-  "main": "dist/index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/pittica/gatsby-plugin-trustpilot-widget.git"
@@ -45,10 +37,5 @@
   },
   "config": {
     "access": "public"
-  },
-  "babel": {
-    "presets": [
-      "babel-preset-gatsby-package"
-    ]
   }
 }

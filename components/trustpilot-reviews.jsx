@@ -16,7 +16,7 @@ export default function TrustpilotReviews({
     sitePlugin: { template, business, username },
   } = useStaticQuery(
     graphql`
-      query TrustPilot {
+      query Trustpilot {
         sitePlugin(name: { eq: "@pittica/gatsby-plugin-trustpilot-widget" }) {
           pluginOptions
         }
