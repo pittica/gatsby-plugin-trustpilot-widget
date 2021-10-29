@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from "react"
+import React, { useState, useEffect, useRef } from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
-import isReady from "../utils/is-ready"
 import filterLocale from "../utils/filter-locale"
 
 export default function TrustpilotReviews({
@@ -12,9 +11,8 @@ export default function TrustpilotReviews({
   height,
   width,
 }) {
-  const [ready, setReady] = useState(isReady())
   const [loaded, setLoaded] = useState(false)
-  const reference = React.createRef()
+  const ref = useRef()
   const {
     sitePlugin: {
       pluginOptions: { template, business, username },
@@ -29,40 +27,36 @@ export default function TrustpilotReviews({
     `
   )
   const { domain, locale } = filterLocale(language, culture)
-  useEffect(() => {
-    setReady(isReady())
-  }, [!ready])
 
   useEffect(() => {
-    if (!loaded && ready) {
-      window.Trustpilot.loadFromElement(reference.current, true)
+    if (typeof window !== "undefined" && window.Trustpilot) {
+      window.Trustpilot.loadFromElement(ref.current, true)
       setLoaded(true)
     }
+
+    console.log(loaded)
   }, [loaded])
-  if (ready) {
-    return (
-      <div
-        ref={reference}
-        className="trustpilot-widget"
-        data-locale={locale}
-        data-template-id={template}
-        data-businessunit-id={business}
-        data-style-height={height}
-        data-style-width={width}
-        data-theme={theme}
+
+  return (
+    <div
+      ref={ref}
+      className="trustpilot-widget"
+      data-locale={locale}
+      data-template-id={template}
+      data-businessunit-id={business}
+      data-style-height={height}
+      data-style-width={width}
+      data-theme={theme}
+    >
+      <a
+        href={`https://${domain}.trustpilot.com/review/${username}`}
+        target="_blank"
+        rel="noopener"
       >
-        <a
-          href={`https://${domain}.trustpilot.com/review/${username}`}
-          target="_blank"
-          rel="noopener"
-        >
-          Trustpilot
-        </a>
-      </div>
-    )
-  } else {
-    return null
-  }
+        Trustpilot
+      </a>
+    </div>
+  )
 }
 
 TrustpilotReviews.propTypes = {
