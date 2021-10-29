@@ -33,8 +33,6 @@ export default function TrustpilotReviews({
       window.Trustpilot.loadFromElement(ref.current, true)
       setLoaded(true)
     }
-
-    console.log(loaded)
   }, [loaded])
 
   return (
