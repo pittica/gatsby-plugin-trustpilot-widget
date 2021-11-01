@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react"
+import { Helmet } from "react-helmet"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
 
 import filterLocale from "../utils/filter-locale"
 
@@ -10,22 +10,12 @@ export default function TrustpilotReviews({
   theme,
   height,
   width,
+  template,
+  business,
+  username,
 }) {
   const [loaded, setLoaded] = useState(false)
   const ref = useRef()
-  const {
-    sitePlugin: {
-      pluginOptions: { template, business, username },
-    },
-  } = useStaticQuery(
-    graphql`
-      query Trustpilot {
-        sitePlugin(name: { eq: "@pittica/gatsby-plugin-trustpilot-widget" }) {
-          pluginOptions
-        }
-      }
-    `
-  )
   const { domain, locale } = filterLocale(language, culture)
 
   useEffect(() => {
@@ -46,6 +36,13 @@ export default function TrustpilotReviews({
       data-style-width={width}
       data-theme={theme}
     >
+      <Helmet>
+        <script
+          type="text/javascript"
+          src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js"
+          async={true}
+        />
+      </Helmet>
       <a
         href={`https://${domain}.trustpilot.com/review/${username}`}
         target="_blank"
@@ -63,6 +60,9 @@ TrustpilotReviews.propTypes = {
   theme: PropTypes.string,
   height: PropTypes.string,
   width: PropTypes.string,
+  template: PropTypes.string.isRequired,
+  business: PropTypes.string.isRequired,
+  username: PropTypes.string.isRequired,
 }
 
 TrustpilotReviews.defaultProps = {

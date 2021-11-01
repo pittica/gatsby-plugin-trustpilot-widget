@@ -13,3 +13,4 @@ examples
 gatsby-plugin-trustpilot-widget.code-workspace
 .prettierignore
 .prettierrc
+src

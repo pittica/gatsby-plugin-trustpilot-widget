@@ -19,24 +19,7 @@
 npm install @pittica/gatsby-plugin-trustpilot-widget
 ```
 
-## Configuration
-
-Edit your **gatsby-config.js**.
-
-```javascript
-module.exports = {
-  plugins: [
-    {
-      resolve: `@pittica/gatsby-plugin-trustpilot-widget`,
-      options: {
-        username: "USERNAME",
-        template: "TEMPLATE_ID",
-        business: "BUSINESSUNIT_ID"
-      }
-    },
-  ],
-}
-```
+## Component Usage
 
 The _username_, _template_ and _business_ fields **are required**.
 
@@ -49,8 +32,6 @@ You can get the data from the TrustBox in your businness panel on [Trustpilot](h
 </div>
 <!-- End TrustBox widget -->
 ```
-
-## Component Usage
 
 Import the component **TrustpilotReviews** in your component.
 
@@ -70,6 +51,9 @@ class MyComponent extends React.Component {
         theme="light"
         width="100%"
         height="52px"
+        template="TEMPLATE_ID"
+        business="BUSINESSUNIT_ID"
+        username="USERNAME"
       />
     )
   }
@@ -85,9 +69,11 @@ The component has optional attributes which the user can use to set the aspect o
 Sets the language of the locale and the language of the API.
 
 ##### Default Value
+
 `en`
 
 ##### Note
+
 If you set the language attribute you have to set the _culture_ attribute too.
 
 #### culture
@@ -95,9 +81,11 @@ If you set the language attribute you have to set the _culture_ attribute too.
 Sets the culture of the locale.
 
 ##### Default Value
+
 `US`
 
 ##### Note
+
 If you set the culture attribute you have to set the _language_ attribute too.
 
 #### theme
@@ -105,10 +93,12 @@ If you set the culture attribute you have to set the _language_ attribute too.
 Sets the UI theme of the TrustBox.
 
 ##### Values
-* `light`
-* `dark`
+
+- `light`
+- `dark`
 
 ##### Default value
+
 `light`
 
 #### width
@@ -116,6 +106,7 @@ Sets the UI theme of the TrustBox.
 Sets the width of the widget.
 
 ##### Default Value
+
 `100%`
 
 #### height
@@ -123,7 +114,20 @@ Sets the width of the widget.
 Sets the height of the widget.
 
 ##### Default Value
+
 `52px`
+
+#### template
+
+Indicates the template ID.
+
+#### business
+
+Indicates the business ID.
+
+#### username
+
+Indicates the username.
 
 ## Copyright
 
