@@ -1,57 +1,56 @@
-import React, { useState, useEffect, useRef } from "react"
-import { Helmet } from "react-helmet"
+import React, { useState, useEffect, useRef, useContext } from "react"
 import PropTypes from "prop-types"
 
+import TrustpilotContext from "../context/trustpilot-context"
 import filterLocale from "../utils/filter-locale"
 
-export default function TrustpilotReviews({
-  language,
-  culture,
-  theme,
-  height,
-  width,
-  template,
-  business,
-  username,
-}) {
-  const [loaded, setLoaded] = useState(false)
-  const ref = useRef()
-  const { domain, locale } = filterLocale(language, culture)
+export default function TrustpilotReviews(props) {
+  const {
+    language,
+    culture,
+    theme,
+    height,
+    width,
+    template,
+    business,
+    username,
+  } = { ...props, ...useContext(TrustpilotContext) }
 
-  useEffect(() => {
-    if (typeof window !== "undefined" && window.Trustpilot) {
-      window.Trustpilot.loadFromElement(ref.current, true)
-      setLoaded(true)
-    }
-  }, [loaded])
+  if (template && business && username) {
+    const [loaded, setLoaded] = useState(false)
+    const ref = useRef()
+    const { domain, locale } = filterLocale(language, culture)
 
-  return (
-    <div
-      ref={ref}
-      className="trustpilot-widget"
-      data-locale={locale}
-      data-template-id={template}
-      data-businessunit-id={business}
-      data-style-height={height}
-      data-style-width={width}
-      data-theme={theme}
-    >
-      <Helmet>
-        <script
-          type="text/javascript"
-          src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js"
-          async={true}
-        />
-      </Helmet>
-      <a
-        href={`https://${domain}.trustpilot.com/review/${username}`}
-        target="_blank"
-        rel="noopener"
+    useEffect(() => {
+      if (typeof window !== "undefined" && window.Trustpilot) {
+        window.Trustpilot.loadFromElement(ref.current, true)
+        setLoaded(true)
+      }
+    }, [loaded])
+
+    return (
+      <div
+        ref={ref}
+        className="trustpilot-widget"
+        data-locale={locale}
+        data-template-id={template}
+        data-businessunit-id={business}
+        data-style-height={height}
+        data-style-width={width}
+        data-theme={theme}
       >
-        Trustpilot
-      </a>
-    </div>
-  )
+        <a
+          href={`https://${domain}.trustpilot.com/review/${username}`}
+          target="_blank"
+          rel="noopener"
+        >
+          Trustpilot
+        </a>
+      </div>
+    )
+  } else {
+    return null
+  }
 }
 
 TrustpilotReviews.propTypes = {
@@ -60,15 +59,7 @@ TrustpilotReviews.propTypes = {
   theme: PropTypes.string,
   height: PropTypes.string,
   width: PropTypes.string,
-  template: PropTypes.string.isRequired,
-  business: PropTypes.string.isRequired,
-  username: PropTypes.string.isRequired,
-}
-
-TrustpilotReviews.defaultProps = {
-  language: "en",
-  culture: "US",
-  theme: "light",
-  height: "52px",
-  width: "100%",
+  template: PropTypes.string,
+  business: PropTypes.string,
+  username: PropTypes.string,
 }

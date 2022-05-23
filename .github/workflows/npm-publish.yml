@@ -29,7 +29,10 @@ jobs:
           registry-url: https://registry.npmjs.org/
       - name: CI
         run: npm ci
+      - name: Build
+        run: npm run build
       - name: Publish
+        working-directory: ./dist
         run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
@@ -48,7 +51,10 @@ jobs:
           registry-url: https://npm.pkg.github.com/
       - name: CI
         run: npm ci
+      - name: Build
+        run: npm run build
       - name: Publish
+        working-directory: ./dist
         run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}

@@ -131,4 +131,4 @@ Indicates the username.
 
 ## Copyright
 
-(c) 2020-2021, [Pittica S.r.l.](https://pittica.com).
+(c) 2020-2022, [Pittica S.r.l.](https://pittica.com).
